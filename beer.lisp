@@ -55,7 +55,7 @@
     (mapc (lambda (in-fname)
 	    (let ((out-fname (concatenate 'string "output/" (story-path in-fname idx))))
 	      (process-template-file in-fname out-fname syms)))
-	  (cl-fad:list-directory "drink-template/Stories"))))
+	  (cl-fad:list-directory "drinks-template/Stories"))))
 
 (defun join (strs)
   (format nil "~{~A ~}" strs))
@@ -71,7 +71,7 @@
 		   appending
 		     (mapcar (lambda (fname)
 			       (format nil "<idPkg:Story src=\"~A\" />" (story-path fname i)))
-			     (cl-fad:list-directory "drink-template/Stories")))))
+			     (cl-fad:list-directory "drinks-template/Stories")))))
 
 (defun design-map-syms (num-stories)
   `(("story-list" ,(story-list num-stories))
@@ -93,12 +93,12 @@
     ("fixed-width" ,text-column-fixed-width)))
 
 (defun generate-text-frame-for-story (text-frame-syms)
-  (let ((template (read-entire-file "drink-template/text-frame.xml")))
+  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
     (format nil "~A" (subst-template template text-frame-syms))))
 
 (defparameter *row-height* 50)
-(defparameter *top* 0)
-(defparameter *left* 0)
+(defparameter *top* 23)
+(defparameter *left* 157)
 
 (defun text-frame-syms-for-beer (id)
   (let ((y-off (* id *row-height*)))
@@ -109,14 +109,14 @@
 
 (defun generate-text-frames-for-beer (id)
   (join-newline (mapcar (lambda (syms)
-			  (let ((template (read-entire-file "drink-template/text-frame.xml")))
+			  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
 			    (format nil "~A" (subst-template template syms))))
 			(text-frame-syms-for-beer id))))
 
 (defun process-spread-file (num-beers)
   (let ((syms `(("text-frames" ,(join-newline (loop for i below num-beers
 						 collecting (generate-text-frames-for-beer i)))))))
-    (process-template-file "drink-template/Spreads/Spread_uc7.xml" "output/Spreads/Spread_uc7.xml" syms)))
+    (process-template-file "drinks-template/Spreads/Spread_ub9.xml" "output/Spreads/Spread_ub9.xml" syms)))
 
 
 (defvar *beers*)
@@ -128,17 +128,16 @@
   (loop for i from 0
      for beer in *beers*
      do (process-stories i (apply 'story-syms beer)))
-  (process-template-file "drink-template/designmap.xml" "output/designmap.xml" (design-map-syms (length *beers*)))
+  (process-template-file "drinks-template/designmap.xml" "output/designmap.xml" (design-map-syms (length *beers*)))
   (process-spread-file (length *beers*))
 
   (uiop:chdir "output")
+  (uiop:delete-file-if-exists "generated_menu.idml")
 
   #+windows
   (uiop:run-program "7z a -tzip generated_menu.idml output/* -mx0 -r")
   #-windows
-  (progn
-    (uiop:run-program "rm -f generated_menu.idml")
-    (uiop:run-program "zip -X0 -r -J generated_menu.idml *"))
+  (uiop:run-program "zip -X0 -r -J generated_menu.idml *")
 
   (uiop:chdir ".."))
 

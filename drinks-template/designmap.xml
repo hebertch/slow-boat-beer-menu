@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <?aid style="50" type="document" readerVersion="6.0" featureSet="257" product="10.0(70)" ?>
-<Document xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="10.0" Self="d" StoryList="ch_name00 en_name00 desc00 price00 ch_name01 en_name01 desc01 price01 ch_name02 en_name02 desc02 price02  uc8 u72f u9b" ZeroPoint="0 0" ActiveLayer="ub6" CMYKProfile="U.S. Web Coated (SWOP) v2" RGBProfile="sRGB IEC61966-2.1" SolidColorIntent="UseColorSettings" AfterBlendingIntent="UseColorSettings" DefaultImageIntent="UseColorSettings" RGBPolicy="PreserveEmbeddedProfiles" CMYKPolicy="CombinationOfPreserveAndSafeCmyk" AccurateLABSpots="false">
+<Document xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="10.0" Self="d" StoryList="%story-list% uc8 u72f u9b" ZeroPoint="0 0" ActiveLayer="ub6" CMYKProfile="U.S. Web Coated (SWOP) v2" RGBProfile="sRGB IEC61966-2.1" SolidColorIntent="UseColorSettings" AfterBlendingIntent="UseColorSettings" DefaultImageIntent="UseColorSettings" RGBPolicy="PreserveEmbeddedProfiles" CMYKPolicy="CombinationOfPreserveAndSafeCmyk" AccurateLABSpots="false">
 	<Language Self="Language/$ID/English%3a USA" Name="$ID/English: USA" SingleQuotes="‘’" DoubleQuotes="“”" PrimaryLanguageName="$ID/English" SublanguageName="$ID/USA" Id="269" HyphenationVendor="Proximity" SpellingVendor="Proximity" />
 	<idPkg:Graphic src="Resources/Graphic.xml" />
 	<idPkg:Fonts src="Resources/Fonts.xml" />
@@ -145,25 +145,7 @@
 	<idPkg:BackingStory src="XML/BackingStory.xml" />
 	<idPkg:Story src="Stories/Story_u72f.xml" />
 	<idPkg:Story src="Stories/Story_uc8.xml" />
-	<idPkg:Story src="Stories/Story_ch_name00.xml" />
-<idPkg:Story src="Stories/Story_desc00.xml" />
-<idPkg:Story src="Stories/Story_en_name00.xml" />
-<idPkg:Story src="Stories/Story_price00.xml" />
-<idPkg:Story src="Stories/Story_u72f00.xml" />
-<idPkg:Story src="Stories/Story_uc800.xml" />
-<idPkg:Story src="Stories/Story_ch_name01.xml" />
-<idPkg:Story src="Stories/Story_desc01.xml" />
-<idPkg:Story src="Stories/Story_en_name01.xml" />
-<idPkg:Story src="Stories/Story_price01.xml" />
-<idPkg:Story src="Stories/Story_u72f01.xml" />
-<idPkg:Story src="Stories/Story_uc801.xml" />
-<idPkg:Story src="Stories/Story_ch_name02.xml" />
-<idPkg:Story src="Stories/Story_desc02.xml" />
-<idPkg:Story src="Stories/Story_en_name02.xml" />
-<idPkg:Story src="Stories/Story_price02.xml" />
-<idPkg:Story src="Stories/Story_u72f02.xml" />
-<idPkg:Story src="Stories/Story_uc802.xml" />
-
+	%story-elements%
 	<IndexingSortOption Self="dIndexingSortOptionnkIndexGroup_Symbol" Name="$ID/kIndexGroup_Symbol" Include="true" Priority="0" HeaderType="Nothing" />
 	<IndexingSortOption Self="dIndexingSortOptionnkIndexGroup_Alphabet" Name="$ID/kIndexGroup_Alphabet" Include="true" Priority="1" HeaderType="BasicLatin" />
 	<IndexingSortOption Self="dIndexingSortOptionnkIndexGroup_Numeric" Name="$ID/kIndexGroup_Numeric" Include="false" Priority="2" HeaderType="Nothing" />
