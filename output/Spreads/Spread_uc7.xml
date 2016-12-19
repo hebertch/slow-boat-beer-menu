@@ -25,7 +25,7 @@
 				</Properties>
 			</GridDataInformation>
 		</Page>
-		<TextFrame Self="generated_id_0" ParentStory="ch_name00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
+		<TextFrame Self="generated_id0" ParentStory="ch_name00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
   <Properties>
     <PathGeometry>
       <GeometryPathType PathOpen="false">
@@ -52,7 +52,7 @@
   </ObjectExportOption>
 </TextFrame>
 
-<TextFrame Self="generated_id_1" ParentStory="en_name00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
+<TextFrame Self="generated_id1" ParentStory="en_name00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
   <Properties>
     <PathGeometry>
       <GeometryPathType PathOpen="false">
@@ -79,7 +79,7 @@
   </ObjectExportOption>
 </TextFrame>
 
-<TextFrame Self="generated_id_2" ParentStory="desc00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
+<TextFrame Self="generated_id2" ParentStory="desc00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
   <Properties>
     <PathGeometry>
       <GeometryPathType PathOpen="false">
@@ -106,7 +106,7 @@
   </ObjectExportOption>
 </TextFrame>
 
-<TextFrame Self="generated_id_3" ParentStory="price00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
+<TextFrame Self="generated_id3" ParentStory="price00" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
   <Properties>
     <PathGeometry>
       <GeometryPathType PathOpen="false">
@@ -115,224 +115,6 @@
 	  <PathPointType Anchor="220.6 10.5" LeftDirection="220.6 10.5" RightDirection="220.6 10.5" />
 	  <PathPointType Anchor="241.9 10.5" LeftDirection="241.9 10.5" RightDirection="241.9 10.5" />
 	  <PathPointType Anchor="241.9 0" LeftDirection="241.9 0" RightDirection="241.9 0" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="21.3" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-
-<TextFrame Self="generated_id_4" ParentStory="ch_name01" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 60.5" LeftDirection="0 60.5" RightDirection="0 60.5" />
-	  <PathPointType Anchor="0 72.5" LeftDirection="0 72.5" RightDirection="0 72.5" />
-	  <PathPointType Anchor="161.5 72.5" LeftDirection="161.5 72.5" RightDirection="161.5 72.5" />
-	  <PathPointType Anchor="161.5 60.5" LeftDirection="161.5 60.5" RightDirection="161.5 60.5" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="161.6" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_5" ParentStory="en_name01" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 50.6" LeftDirection="0 50.6" RightDirection="0 50.6" />
-	  <PathPointType Anchor="0 72.3" LeftDirection="0 72.3" RightDirection="0 72.3" />
-	  <PathPointType Anchor="210.7 72.3" LeftDirection="210.7 72.3" RightDirection="210.7 72.3" />
-	  <PathPointType Anchor="210.7 50.6" LeftDirection="210.7 50.6" RightDirection="210.7 50.6" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="210.4" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_6" ParentStory="desc01" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 68" LeftDirection="0 68" RightDirection="0 68" />
-	  <PathPointType Anchor="0 92" LeftDirection="0 92" RightDirection="0 92" />
-	  <PathPointType Anchor="254 92" LeftDirection="254 92" RightDirection="254 92" />
-	  <PathPointType Anchor="254 68" LeftDirection="254 68" RightDirection="254 68" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="254" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_7" ParentStory="price01" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="220.6 50" LeftDirection="220.6 50" RightDirection="220.6 50" />
-	  <PathPointType Anchor="220.6 60.5" LeftDirection="220.6 60.5" RightDirection="220.6 60.5" />
-	  <PathPointType Anchor="241.9 60.5" LeftDirection="241.9 60.5" RightDirection="241.9 60.5" />
-	  <PathPointType Anchor="241.9 50" LeftDirection="241.9 50" RightDirection="241.9 50" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="21.3" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-
-<TextFrame Self="generated_id_8" ParentStory="ch_name02" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 110.5" LeftDirection="0 110.5" RightDirection="0 110.5" />
-	  <PathPointType Anchor="0 122.5" LeftDirection="0 122.5" RightDirection="0 122.5" />
-	  <PathPointType Anchor="161.5 122.5" LeftDirection="161.5 122.5" RightDirection="161.5 122.5" />
-	  <PathPointType Anchor="161.5 110.5" LeftDirection="161.5 110.5" RightDirection="161.5 110.5" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="161.6" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_9" ParentStory="en_name02" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 100.6" LeftDirection="0 100.6" RightDirection="0 100.6" />
-	  <PathPointType Anchor="0 122.3" LeftDirection="0 122.3" RightDirection="0 122.3" />
-	  <PathPointType Anchor="210.7 122.3" LeftDirection="210.7 122.3" RightDirection="210.7 122.3" />
-	  <PathPointType Anchor="210.7 100.6" LeftDirection="210.7 100.6" RightDirection="210.7 100.6" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="210.4" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_10" ParentStory="desc02" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="0 118" LeftDirection="0 118" RightDirection="0 118" />
-	  <PathPointType Anchor="0 142" LeftDirection="0 142" RightDirection="0 142" />
-	  <PathPointType Anchor="254 142" LeftDirection="254 142" RightDirection="254 142" />
-	  <PathPointType Anchor="254 118" LeftDirection="254 118" RightDirection="254 118" />
-	</PathPointArray>
-      </GeometryPathType>
-    </PathGeometry>
-  </Properties>
-  <TextFramePreference TextColumnCount="1" TextColumnFixedWidth="254" TextColumnMaxWidth="0" />
-  <TextWrapPreference Inverse="false" ApplyToMasterPageOnly="false" TextWrapSide="BothSides" TextWrapMode="None">
-    <Properties>
-      <TextWrapOffset Top="0" Left="0" Bottom="0" Right="0" />
-    </Properties>
-  </TextWrapPreference>
-  <ObjectExportOption EpubType="$ID/" UseExistingImage="false" CustomHeightType="DefaultHeight" CustomHeight="$ID/" CustomWidthType="DefaultWidth" CustomWidth="$ID/" AltTextSourceType="SourceXMLStructure" ActualTextSourceType="SourceXMLStructure" CustomAltText="$ID/" CustomActualText="$ID/" ApplyTagType="TagFromStructure" CustomImageConversion="false" ImageConversionType="JPEG" ImageExportResolution="Ppi300" GIFOptionsPalette="AdaptivePalette" GIFOptionsInterlaced="true" JPEGOptionsQuality="High" JPEGOptionsFormat="BaselineEncoding" ImageAlignment="AlignLeft" ImageSpaceBefore="0" ImageSpaceAfter="0" UseImagePageBreak="false" ImagePageBreak="PageBreakBefore" CustomImageAlignment="false" SpaceUnit="CssPixel" CustomLayout="false" CustomLayoutType="AlignmentAndSpacing" UseOriginalImage="false">
-    <Properties>
-      <AltMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-      <ActualMetadataProperty NamespacePrefix="$ID/" PropertyPath="$ID/" />
-    </Properties>
-  </ObjectExportOption>
-</TextFrame>
-
-<TextFrame Self="generated_id_11" ParentStory="price02" PreviousTextFrame="n" NextTextFrame="n" ContentType="TextType" ParentInterfaceChangeCount="" TargetInterfaceChangeCount="" LastUpdatedInterfaceChangeCount="" OverriddenPageItemProps="" HorizontalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" VerticalLayoutConstraints="FlexibleDimension FixedDimension FlexibleDimension" GradientFillStart="0 0" GradientFillLength="0" GradientFillAngle="0" GradientStrokeStart="0 0" GradientStrokeLength="0" GradientStrokeAngle="0" ItemLayer="uc4" Locked="false" LocalDisplaySetting="Default" GradientFillHiliteLength="0" GradientFillHiliteAngle="0" GradientStrokeHiliteLength="0" GradientStrokeHiliteAngle="0" AppliedObjectStyle="ObjectStyle/$ID/[Normal Text Frame]" Visible="true" Name="$ID/" ItemTransform="1 0 0 1 0 0">
-  <Properties>
-    <PathGeometry>
-      <GeometryPathType PathOpen="false">
-	<PathPointArray>
-	  <PathPointType Anchor="220.6 100" LeftDirection="220.6 100" RightDirection="220.6 100" />
-	  <PathPointType Anchor="220.6 110.5" LeftDirection="220.6 110.5" RightDirection="220.6 110.5" />
-	  <PathPointType Anchor="241.9 110.5" LeftDirection="241.9 110.5" RightDirection="241.9 110.5" />
-	  <PathPointType Anchor="241.9 100" LeftDirection="241.9 100" RightDirection="241.9 100" />
 	</PathPointArray>
       </GeometryPathType>
     </PathGeometry>

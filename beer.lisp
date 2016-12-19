@@ -22,7 +22,7 @@
   (ensure-directories-exist out-fname)
   (with-open-file (out out-fname :direction :output :if-exists :supersede)
     (let ((template (read-entire-file in-fname)))
-      (format out "~A" (subst-template template syms)))))
+      (princ (subst-template template syms) out))))
 
 (defun strip-extension (str) (subseq str 0 (- (length str) 4)))
 (defun pad-num (num) (format nil "~2,'0D" num))
@@ -76,7 +76,7 @@
 
 (defvar *id* 0)
 (defun gen-id ()
-  (let ((res (format nil "generated_id_~A" *id*)))
+  (let ((res (format nil "generated_id~A" *id*)))
     (incf *id*)
     res))
 
@@ -129,7 +129,7 @@
   (process-spread-file (length *beers*))
 
   (uiop:run-program "rm -f generated_menu.idml")
-  (uiop:run-program "zip -X0 -r generated_menu.idml output"))
+  (uiop:run-program "zip -X0 -r generated_menu.idml output/*"))
 
 (process-menu)
 
