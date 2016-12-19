@@ -1,11 +1,13 @@
 ;;;; beer.lisp
 
 (ql:quickload :cl-ppcre)
+(ql:quickload :cl-ppcre-unicode)
 (ql:quickload :cl-fad)
 (ql:quickload :cl-csv)
+(ql:quickload :trivial-utf-8)
 
 (defun subst-template (template syms)
-  (cl-ppcre:regex-replace-all "%([^%]+)%"
+  (cl-ppcre:regex-replace-all "%([^%^<^>^\"]+)%"
 			      template
 			      (lambda (match &rest registers)
 				(declare (ignore match))
@@ -13,16 +15,17 @@
 			      :simple-calls t))
 
 (defun read-entire-file (fname)
-  (with-open-file (stream fname)
-    (let ((data (make-string (file-length stream))))
-      (read-sequence data stream)
-      data)))
+  (with-open-file (stream fname  :element-type '(unsigned-byte 8))
+    (trivial-utf-8:read-utf-8-string stream :stop-at-eof t)))
 
 (defun process-template-file (in-fname out-fname syms)
   (ensure-directories-exist out-fname)
-  (with-open-file (out out-fname :direction :output :if-exists :supersede)
+  (with-open-file (out out-fname
+		       :element-type '(unsigned-byte 8)
+		       :direction :output
+		       :if-exists :supersede)
     (let ((template (read-entire-file in-fname)))
-      (princ (subst-template template syms) out))))
+      (trivial-utf-8:write-utf-8-bytes (subst-template template syms) out))))
 
 (defun strip-extension (str) (subseq str 0 (- (length str) 4)))
 (defun pad-num (num) (format nil "~2,'0D" num))
@@ -132,10 +135,3 @@
   (uiop:run-program "zip -X0 -r generated_menu.idml output/*"))
 
 (process-menu)
-
-;; TODO:
-;; Generate spread
-;; Generate text frames
-;; Generate stories
-;; control font sizes
-;; zip up w/o compression. for windows, too
