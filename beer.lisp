@@ -131,11 +131,15 @@
   (process-template-file "drink-template/designmap.xml" "output/designmap.xml" (design-map-syms (length *beers*)))
   (process-spread-file (length *beers*))
 
+  (uiop:chdir "output")
+
   #+windows
   (uiop:run-program "7z a -tzip generated_menu.idml output/* -mx0 -r")
   #-windows
   (progn
     (uiop:run-program "rm -f generated_menu.idml")
-    (uiop:run-program "zip -X0 -r generated_menu.idml output/*")))
+    (uiop:run-program "zip -X0 -r -J generated_menu.idml *"))
+
+  (uiop:chdir ".."))
 
 (process-menu)
