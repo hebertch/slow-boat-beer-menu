@@ -1,5 +1,11 @@
 ;;;; beer.lisp
 
+(defparameter *row-height* 40)
+(defparameter *top* -250.0)
+(defparameter *left* 23)
+
+
+
 (ql:quickload :cl-ppcre)
 (ql:quickload :cl-ppcre-unicode)
 (ql:quickload :cl-fad)
@@ -96,10 +102,6 @@
   (let ((template (read-entire-file "drinks-template/text-frame.xml")))
     (format nil "~A" (subst-template template text-frame-syms))))
 
-(defparameter *row-height* 50)
-(defparameter *frame-top* -250.0)
-(defparameter *left* 23)
-
 (defun text-frame-syms-for-beer (id)
   (let ((y-off (* id *row-height*)))
     (list (text-frame-syms (format nil "ch_name~A" (pad-num id)) (+ *left* 0) (+ *top* y-off 10.5) (+ *left* 161.5) (+ *top* y-off 22.5) 161.6)
@@ -111,7 +113,7 @@
   (join-newline (mapcar (lambda (syms)
 			  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
 			    (format nil "~A" (subst-template template
-							     (cons (list "frame-top" *frame-top*) syms)))))
+							     (cons (list "frame-top" *top*) syms)))))
 			(text-frame-syms-for-beer id))))
 
 (defun process-spread-file (num-beers)
@@ -125,11 +127,15 @@
   (setq *id* 0)
   (setq *beers* (with-open-file (in "beers.csv") (cl-csv:read-csv in)))
 
-  (loop for i from 0
-     for beer in *beers*
-     do (process-stories i (apply 'story-syms beer)))
-  (process-template-file "drinks-template/designmap.xml" "output/designmap.xml" (design-map-syms (length *beers*)))
-  (process-spread-file (length *beers*))
+  (let ((beers (mapcar 'butlast
+		       (remove-if-not (lambda (beer)
+					(string= "TRUE" (car (last beer))))
+				      *beers*))))
+    (loop for i from 0
+       for beer in beers
+       do (process-stories i (apply 'story-syms beer)))
+    (process-template-file "drinks-template/designmap.xml" "output/designmap.xml" (design-map-syms (length beers)))
+    (process-spread-file (length beers)))
 
   (uiop:chdir "output")
   (uiop:delete-file-if-exists "generated_menu.idml")
