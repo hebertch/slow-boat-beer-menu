@@ -121,7 +121,6 @@
 
 
 (defvar *beers*)
-
 (defun process-menu ()
   (setq *id* 0)
   (setq *beers* (with-open-file (in "beers.csv") (cl-csv:read-csv in)))
