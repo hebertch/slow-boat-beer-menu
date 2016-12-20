@@ -98,7 +98,7 @@
 
 (defparameter *row-height* 50)
 (defparameter *top* 0)
-(defparameter *left* 23)
+(defparameter *left* 0)
 
 (defun text-frame-syms-for-beer (id)
   (let ((y-off (* id *row-height*)))
