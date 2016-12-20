@@ -97,7 +97,7 @@
     (format nil "~A" (subst-template template text-frame-syms))))
 
 (defparameter *row-height* 50)
-(defparameter *top* 0)
+(defparameter *top* 400)
 (defparameter *left* 23)
 
 (defun text-frame-syms-for-beer (id)
