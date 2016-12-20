@@ -97,7 +97,7 @@
     (format nil "~A" (subst-template template text-frame-syms))))
 
 (defparameter *row-height* 50)
-(defparameter *top* 0)
+(defparameter *frame-top* -250.0)
 (defparameter *left* 23)
 
 (defun text-frame-syms-for-beer (id)
@@ -110,7 +110,8 @@
 (defun generate-text-frames-for-beer (id)
   (join-newline (mapcar (lambda (syms)
 			  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
-			    (format nil "~A" (subst-template template syms))))
+			    (format nil "~A" (subst-template template
+							     (cons (list "frame-top" *frame-top*) syms)))))
 			(text-frame-syms-for-beer id))))
 
 (defun process-spread-file (num-beers)
