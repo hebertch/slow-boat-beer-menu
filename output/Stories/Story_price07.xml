@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<idPkg:Story xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="10.0">
+	<Story Self="price07" AppliedTOCStyle="n" TrackChanges="false" StoryTitle="$ID/" AppliedNamedGrid="n">
+		<StoryPreference OpticalMarginAlignment="false" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection" />
+		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false" />
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" TreatIdeographicSpaceAsSpace="false">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/prices" FillColor="Color/R=250 G=39 B=54" PointSize="10" StrokeWeight="0.729050602771395" MiterLimit="2.91620241108558" RubyFontSize="-0.66" KentenFontSize="-0.66" DiacriticPosition="OpentypePosition">
+				<Properties>
+					<AppliedFont type="string">Thonburi</AppliedFont>
+				</Properties>
+				<Content>¥</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/prices" FillColor="Color/R=250 G=39 B=54" PointSize="10" StrokeWeight="0.729050602771395" MiterLimit="2.91620241108558" RubyFontSize="-0.66" KentenFontSize="-0.66" DiacriticPosition="OpentypePosition">
+				<Content>40</Content>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+	</Story>
+</idPkg:Story>

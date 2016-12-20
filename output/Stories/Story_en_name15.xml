@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<idPkg:Story xmlns:idPkg="http://ns.adobe.com/AdobeInDesign/idml/1.0/packaging" DOMVersion="10.0">
+	<Story Self="en_name15" AppliedTOCStyle="n" TrackChanges="false" StoryTitle="$ID/" AppliedNamedGrid="n">
+		<StoryPreference OpticalMarginAlignment="false" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection" />
+		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false" />
+		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" HyphenationZone="32.4" RuleAboveLineWeight="0.9" RuleBelowLineWeight="0.9" SplitColumnInsideGutter="5.4" TreatIdeographicSpaceAsSpace="false">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/MENU TITLES" PointSize="10" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
+				<Content>CAPTAIN'S PALE ALE</Content>
+			</CharacterStyleRange>
+		</ParagraphStyleRange>
+	</Story>
+</idPkg:Story>
