@@ -1,0 +1,3 @@
+船长淡色艾尔	CAPTAIN'S PALE ALE	"Light, Malty, Body Citrusy Hops Balanced Flavor"	酒体轻盈爽口 混和麦芽的自然甜味 平衡柑橘的酸涩	40	TRUE
+猴拳印度淡色艾尔	MONKEY’S FIST IPA	"Refreshing, Hoppy Subtle Mango Flavor"	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	TRUE
+猴拳印度淡色艾尔	MONKEY’S FIST IPA	"Refreshing, Hoppy Subtle Mango Flavor"	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	FALSE

@@ -1,7 +1,8 @@
 ;;;; beer.lisp
 
-(defparameter *row-height* 40)
-(defparameter *top* -250.0)
+(defparameter *row-height* 35)
+(defparameter *frame-top* -250.0)
+(defparameter *top* 0.0)
 (defparameter *left* 23)
 
 
@@ -113,7 +114,7 @@
   (join-newline (mapcar (lambda (syms)
 			  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
 			    (format nil "~A" (subst-template template
-							     (cons (list "frame-top" *top*) syms)))))
+							     (cons (list "frame-top" *frame-top*) syms)))))
 			(text-frame-syms-for-beer id))))
 
 (defun process-spread-file (num-beers)
@@ -123,9 +124,14 @@
 
 
 (defvar *beers*)
+
 (defun process-menu ()
   (setq *id* 0)
-  (setq *beers* (with-open-file (in "beers.csv") (cl-csv:read-csv in)))
+  (setq *beers* (with-input-from-string (str (read-entire-file "beers.txt"))
+		  (cl-csv:read-csv str 
+				   :separator #\Tab
+				   :quote #\"
+				   :escape #\\)))
 
   (let ((beers (mapcar 'butlast
 		       (remove-if-not (lambda (beer)
@@ -135,16 +141,7 @@
        for beer in beers
        do (process-stories i (apply 'story-syms beer)))
     (process-template-file "drinks-template/designmap.xml" "output/designmap.xml" (design-map-syms (length beers)))
-    (process-spread-file (length beers)))
-
-  (uiop:chdir "output")
-  (uiop:delete-file-if-exists "generated_menu.idml")
-
-  #+windows
-  (uiop:run-program "7z a -tzip generated_menu.idml output/* -mx0 -r")
-  #-windows
-  (uiop:run-program "zip -X0 -r -J generated_menu.idml *")
-
-  (uiop:chdir ".."))
+    (process-spread-file (length beers))))
 
 (process-menu)
+(exit)
