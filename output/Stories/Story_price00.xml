@@ -10,7 +10,7 @@
 				</Properties>
 				<Content>¥</Content>
 			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/prices" FillColor="Color/R=250 G=39 B=54" PointSize="10" StrokeWeight="0.729050602771395" MiterLimit="2.91620241108558" RubyFontSize="-0.66" KentenFontSize="-0.66" DiacriticPosition="OpentypePosition">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/prices" FillColor="Color/R=250 G=39 B=54" PointSize="%price-font-size" StrokeWeight="0.729050602771395" MiterLimit="2.91620241108558" RubyFontSize="-0.66" KentenFontSize="-0.66" DiacriticPosition="OpentypePosition">
 				<Content>40</Content>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>

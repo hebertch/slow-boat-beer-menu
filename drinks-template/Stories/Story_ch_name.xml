@@ -4,7 +4,7 @@
 		<StoryPreference OpticalMarginAlignment="false" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection" />
 		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false" />
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" HyphenationZone="32.4" RuleAboveLineWeight="0.9" RuleBelowLineWeight="0.9" SplitColumnInsideGutter="5.4" TreatIdeographicSpaceAsSpace="false">
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/chinese menu titles" FontStyle="Medium" PointSize="7" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/chinese menu titles" FontStyle="Medium" PointSize="%ch-name-font-size%" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
 				<Properties>
 					<AppliedFont type="string">Heiti TC</AppliedFont>
 				</Properties>

@@ -4,16 +4,13 @@
 		<StoryPreference OpticalMarginAlignment="false" OpticalMarginSize="12" FrameType="TextFrameType" StoryOrientation="Horizontal" StoryDirection="LeftToRightDirection" />
 		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false" />
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" Hyphenation="false" TreatIdeographicSpaceAsSpace="false">
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" PointSize="7" DiacriticPosition="OpentypePosition">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" PointSize="%en-desc-font-size%" DiacriticPosition="OpentypePosition">
 				<Content>%en-desc%</Content>
 			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" PointSize="7" KerningValue="0" DiacriticPosition="OpentypePosition">
-				<Content>r</Content>
-			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" PointSize="7" DiacriticPosition="OpentypePosition">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" PointSize="%en-desc-font-size%" DiacriticPosition="OpentypePosition">
 				<Br />
 			</CharacterStyleRange>
-			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" FontStyle="Medium" PointSize="7" DiacriticPosition="OpentypePosition">
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/descriptions" FontStyle="Medium" PointSize="%ch-desc-font-size%" DiacriticPosition="OpentypePosition">
 				<Properties>
 					<AppliedFont type="string">Heiti TC</AppliedFont>
 				</Properties>
