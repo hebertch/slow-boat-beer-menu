@@ -4,10 +4,10 @@ Top (Pixels)	Left (Pixels)	Text Block Height (Pixels)
 Font Size	7	10	7	7	10		
 	Chinese Name	English Name	Description	Price			
 Offset X (Pixels)	0	0	0	220.6			
-Offset Y (Pixels)	10.5	0.6	18	0			
+Offset Y (Pixels)	30	0.6	38	0			
 Rect Width (Pixels)	161.5	210.7	254	21.3			
-Rect Height (Pixels)	12	21.7	24	21.3			
+Rect Height (Pixels)	12	45	24	21.3			
 Chinese Name	English Name	English Description	Chinese Description	Price	Visible?	ABV	IBUs
-船长淡色艾尔	CAPTAIN'S PALE ALE	"Light, Malty, Body Citrusy Hops Balanced Flavor"	酒体轻盈爽口 混和麦芽的自然甜味 平衡柑橘的酸涩	40	TRUE	5.2	
-猴拳印度淡色艾尔	MONKEY’S FIST IPA	"Refreshing, Hoppy Subtle Mango Flavor"	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	TRUE	6.2	
-猴拳印度淡色艾尔	MONKEY’S FIST IPA	"Refreshing, Hoppy Subtle Mango Flavor"	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	FALSE	6.2	
+船长淡色艾尔	CAPTAIN'S PALE ALE	Light, Malty, Body Citrusy Hops Balanced Flavor	酒体轻盈爽口 混和麦芽的自然甜味 平衡柑橘的酸涩	40	TRUE	5.2	40
+猴拳印度淡色艾尔	MONKEY’S FIST IPA	Refreshing, Hoppy Subtle Mango Flavor	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	TRUE	6.2	38
+猴拳印度淡色艾尔	MONKEY’S FIST IPA	Refreshing, Hoppy Subtle Mango Flavor	入口清爽 浓郁酒花香 精酿酒友最爱 轻微芒果味	40	FALSE	6.2	38

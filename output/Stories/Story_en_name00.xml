@@ -5,7 +5,13 @@
 		<InCopyExportOption IncludeGraphicProxies="true" IncludeAllResources="false" />
 		<ParagraphStyleRange AppliedParagraphStyle="ParagraphStyle/$ID/NormalParagraphStyle" HyphenationZone="32.4" RuleAboveLineWeight="0.9" RuleBelowLineWeight="0.9" SplitColumnInsideGutter="5.4" TreatIdeographicSpaceAsSpace="false">
 			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/MENU TITLES" PointSize="10" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
-				<Content>CAPTAIN'S PALE ALE</Content>
+			  <Content>1) CAPTAIN'S PALE ALE</Content>
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/MENU TITLES" PointSize="10" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
+			  <Br />
+			</CharacterStyleRange>
+			<CharacterStyleRange AppliedCharacterStyle="CharacterStyle/MENU TITLES" PointSize="10" StrokeWeight="0.9941599128700841" MiterLimit="3.9766396514803364" RubyFontSize="-0.9" KentenFontSize="-0.9" DiacriticPosition="OpentypePosition">
+			  <Content>(40%), 5.2 IBUs</Content>
 			</CharacterStyleRange>
 		</ParagraphStyleRange>
 	</Story>

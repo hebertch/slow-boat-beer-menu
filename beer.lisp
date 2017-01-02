@@ -1,19 +1,5 @@
 ;;;; beer.lisp
 
-(defparameter *row-height* 35)
-(defparameter *frame-top* -250.0)
-(defparameter *top* 0.0)
-(defparameter *left* 23) 
-
-(defvar *beers*)
-(defvar *beers-csv*)
-(defvar *group-measures*)
-(defvar *font-sizes*)
-(defvar *offset-xs*)
-(defvar *offset-ys*)
-(defvar *rect-widths*)
-(defvar *rect-heights*)
-
 (ql:quickload :cl-ppcre)
 (ql:quickload :cl-ppcre-unicode)
 (ql:quickload :cl-fad)
@@ -25,21 +11,22 @@
 			      template
 			      (lambda (match &rest registers)
 				(declare (ignore match))
-				(format nil "~A" (cadr (assoc (car registers) syms :test 'string=))))
+				(if (string= "percent" (car registers))
+				    "%"
+				    (format nil "~A" (cadr (assoc (car registers) syms :test 'string=)))))
 			      :simple-calls t))
 
 (defun read-entire-file (fname)
   (with-open-file (stream fname  :element-type '(unsigned-byte 8))
     (trivial-utf-8:read-utf-8-string stream :stop-at-eof t)))
 
-(defun process-template-file (in-fname out-fname syms)
-  (ensure-directories-exist out-fname)
-  (with-open-file (out out-fname
+(defun write-utf-8-file (fname string)
+  (ensure-directories-exist fname)
+  (with-open-file (out fname
 		       :element-type '(unsigned-byte 8)
 		       :direction :output
 		       :if-exists :supersede)
-    (let ((template (read-entire-file in-fname)))
-      (trivial-utf-8:write-utf-8-bytes (subst-template template syms) out))))
+    (trivial-utf-8:write-utf-8-bytes string out)))
 
 (defun strip-extension (str) (subseq str 0 (- (length str) 4)))
 (defun pad-num (num) (format nil "~2,'0D" num))
@@ -57,12 +44,15 @@
 	       (format nil "~2,'0D" num)
 	       ".xml"))
 
-(defun story-syms (ch-name en-name en-desc ch-desc price)
+(defun beer-story-syms (ch-name en-name en-desc ch-desc price ibu abv num)
   `(("ch-name" ,ch-name)
     ("en-name" ,en-name)
     ("en-desc" ,en-desc)
     ("ch-desc" ,ch-desc)
-    ("price" ,price)))
+    ("price" ,price)
+    ("ibu" ,ibu)
+    ("abv" ,abv)
+    ("num" ,num)))
 
 (defun font-size-syms (ch-name en-name en-desc ch-desc price)
   `(("ch-name-font-size" ,ch-name)
@@ -70,13 +60,6 @@
     ("en-desc-font-size" ,en-desc)
     ("ch-desc-font-size" ,ch-desc)
     ("price-font-size" ,price)))
-
-(defun process-stories (idx story-syms)
-  (let* ((syms (append story-syms (story-id-syms idx))))
-    (mapc (lambda (in-fname)
-	    (let ((out-fname (concatenate 'string "output/" (story-path in-fname idx))))
-	      (process-template-file in-fname out-fname syms)))
-	  (cl-fad:list-directory "drinks-template/Stories"))))
 
 (defun join (strs)
   (format nil "~{~A ~}" strs))
@@ -117,94 +100,161 @@
   (let ((template (read-entire-file "drinks-template/text-frame.xml")))
     (format nil "~A" (subst-template template text-frame-syms))))
 
-(defun text-frame-syms-for-beer (id)
-  (let ((y-off (* id *row-height*)))
+(defun ch-name-field (pixel-spec) (nth 0 pixel-spec))
+(defun en-name-field (pixel-spec) (nth 1 pixel-spec))
+(defun desc-field (pixel-spec) (nth 2 pixel-spec))
+(defun price-field (pixel-spec) (nth 3 pixel-spec))
+
+(defun text-frame-syms-for-beer (id left row-height offset-xs offset-ys rect-widths rect-heights)
+  (let ((y-off (* id row-height)))
     (list (text-frame-syms (format nil "ch_name~A" (pad-num id))
-			   (+ *left* (cdr (assoc :ch-name *offset-xs*)))
-			   (+ y-off (cdr (assoc :ch-name *offset-ys*)))
-			   (+ *left* (cdr (assoc :ch-name *offset-xs*)) (cdr (assoc :ch-name *rect-widths*)))
-			   (+ y-off (cdr (assoc :ch-name *offset-ys*)) (cdr (assoc :ch-name *rect-heights*)))
-			   (+ (cdr (assoc :ch-name *offset-xs*)) (cdr (assoc :ch-name *rect-widths*))))
+			   (+ left (ch-name-field offset-xs))
+			   (+ y-off (ch-name-field offset-ys))
+			   (+ left (ch-name-field offset-xs) (ch-name-field rect-widths))
+			   (+ y-off (ch-name-field offset-ys) (ch-name-field rect-heights))
+			   (+ (ch-name-field offset-xs) (ch-name-field rect-widths)))
 	  (text-frame-syms (format nil "en_name~A" (pad-num id))
-			   (+ *left* (cdr (assoc :en-name *offset-xs*)))
-			   (+ y-off (cdr (assoc :en-name *offset-ys*)))
-			   (+ *left* (cdr (assoc :en-name *offset-xs*)) (cdr (assoc :en-name *rect-widths*)))
-			   (+ y-off (cdr (assoc :en-name *offset-ys*)) (cdr (assoc :en-name *rect-heights*)))
-			   (+ (cdr (assoc :en-name *offset-xs*)) (cdr (assoc :en-name *rect-widths*))))
+			   (+ left (en-name-field offset-xs))
+			   (+ y-off (en-name-field offset-ys))
+			   (+ left (en-name-field offset-xs) (en-name-field rect-widths))
+			   (+ y-off (en-name-field offset-ys) (en-name-field rect-heights))
+			   (+ (en-name-field offset-xs) (en-name-field rect-widths)))
 	  (text-frame-syms (format nil "desc~A" (pad-num id))
-			   (+ *left* (cdr (assoc :desc *offset-xs*)))
-			   (+ y-off (cdr (assoc :desc *offset-ys*)))
-			   (+ *left* (cdr (assoc :desc *offset-xs*)) (cdr (assoc :desc *rect-widths*)))
-			   (+ y-off (cdr (assoc :desc *offset-ys*)) (cdr (assoc :desc *rect-heights*)))
-			   (+ (cdr (assoc :desc *offset-xs*)) (cdr (assoc :desc *rect-widths*))))
+			   (+ left (desc-field offset-xs))
+			   (+ y-off (desc-field offset-ys))
+			   (+ left (desc-field offset-xs) (desc-field rect-widths))
+			   (+ y-off (desc-field offset-ys) (desc-field rect-heights))
+			   (+ (desc-field offset-xs) (desc-field rect-widths)))
 	  (text-frame-syms (format nil "price~A" (pad-num id))
-			   (+ *left* (cdr (assoc :price *offset-xs*)))
-			   (+ y-off (cdr (assoc :price *offset-ys*)))
-			   (+ *left* (cdr (assoc :price *offset-xs*)) (cdr (assoc :price *rect-widths*)))
-			   (+ y-off (cdr (assoc :price *offset-ys*)) (cdr (assoc :price *rect-heights*)))
-			   (+ (cdr (assoc :price *offset-xs*)) (cdr (assoc :price *rect-widths*)))))))
+			   (+ left (price-field offset-xs))
+			   (+ y-off (price-field offset-ys))
+			   (+ left (price-field offset-xs) (price-field rect-widths))
+			   (+ y-off (price-field offset-ys) (price-field rect-heights))
+			   (+ (price-field offset-xs) (price-field rect-widths))))))
 
-(defun generate-text-frames-for-beer (id)
-  (join-newline (mapcar (lambda (syms)
-			  (let ((template (read-entire-file "drinks-template/text-frame.xml")))
-			    (format nil "~A" (subst-template template
-							     (cons (list "frame-top" *frame-top*) syms)))))
-			(text-frame-syms-for-beer id))))
+(defun text-frames-beer (id csv)
+  (let ((frame-top (first (group-measures csv)))
+	(left (second (group-measures csv)))
+	(row-height (third (group-measures csv)))
 
-(defun process-spread-file (num-beers)
-  (let ((syms `(("text-frames" ,(join-newline (loop for i below num-beers
-						 collecting (generate-text-frames-for-beer i)))))))
-    (process-template-file "drinks-template/Spreads/Spread_ub9.xml" "output/Spreads/Spread_ub9.xml" syms)))
+	(offset-xs (offset-xs csv))
+	(offset-ys (offset-ys csv))
+	(rect-widths (rect-ws csv))
+	(rect-heights (rect-hs csv)))
+   (join-newline (mapcar (lambda (syms)
+			   (let ((template (read-entire-file "drinks-template/text-frame.xml")))
+			     (format nil "~A" (subst-template template
+							      (cons (list "frame-top" frame-top) syms)))))
+			 (text-frame-syms-for-beer id left row-height offset-xs offset-ys rect-widths rect-heights)))))
 
-(defun process-menu ()
-  (setq *id* 0)
+(defun text-frames (num-beers csv)
+  (join-newline (loop for i below num-beers collecting (text-frames-beer i csv))))
 
-  (setq *beers-csv* (with-input-from-string (str (read-entire-file "beers.txt"))
+(defun spread-syms (text-frames)
+  `(("text-frames" ,text-frames)))
+
+(defun group-measures (csv)
+  (mapcar 'read-from-string (subseq (nth 1 csv) 0 3)))
+(defun font-sizes (csv)
+  (mapcar 'read-from-string (subseq (nth 3 csv) 1 6)))
+
+(defun offset-xs (csv)
+  (mapcar 'read-from-string (subseq (nth 5 csv) 1 5)))
+(defun offset-ys (csv)
+  (mapcar 'read-from-string (subseq (nth 6 csv) 1 5)))
+(defun rect-ws (csv)
+  (mapcar 'read-from-string (subseq (nth 7 csv) 1 5)))
+(defun rect-hs (csv)
+  (mapcar 'read-from-string (subseq (nth 8 csv) 1 5)))
+
+(defun beers (csv)
+  (nthcdr 10 csv))
+
+(defun read-beers-tsv ()
+  (with-input-from-string (str (read-entire-file "beers.txt"))
 		      (cl-csv:read-csv str 
 				       :separator #\Tab
 				       :quote #\"
 				       :escape #\\)))
 
-  (setq *group-measures* (pairlis
-			  '(:top :left :row-height)
-			  (mapcar 'read-from-string (subseq (first (cdr *beers-csv*)) 0 3))))
-  (setq *frame-top* (cdr (assoc :top *group-measures*))
-	*left* (cdr (assoc :left *group-measures*))
-	*row-height* (cdr (assoc :row-height *group-measures*)))
+(defun beer-visible? (beer-row)
+  (string= "TRUE" (nth 5 beer-row)))
+(defun visible-beers (csv)
+  (remove-if-not 'beer-visible? (beers csv)))
 
-  (setq *font-sizes* (pairlis
-		      '(:ch-name :en-name :en-desc :ch-desc :price)
-		      (mapcar 'read-from-string (cdr (cadddr *beers-csv*)))))
+(defun story-syms (beer-story-syms font-size-syms idx)
+  (append beer-story-syms font-size-syms (story-id-syms idx)))
 
-  (setq *offset-xs* (pairlis
-		     '(:ch-name :en-name :desc :price)
-		     (mapcar 'read-from-string (subseq (nth 5 *beers-csv*) 1 5))))
-  (setq *offset-ys* (pairlis
-		     '(:ch-name :en-name :desc :price)
-		     (mapcar 'read-from-string (subseq (nth 6 *beers-csv*) 1 5))))
-  (setq *rect-widths* (pairlis
-		       '(:ch-name :en-name :desc :price)
-		       (mapcar 'read-from-string (subseq (nth 7 *beers-csv*) 1 5))))
-  (setq *rect-heights* (pairlis
-			'(:ch-name :en-name :desc :price)
-			(mapcar 'read-from-string (subseq (nth 8 *beers-csv*) 1 5))))
+(defun output-path (path) (concatenate 'string "output/" path))
 
-  (setq *beers* (nthcdr 10 *beers-csv*))
+(defun story-template-files ()
+  (cl-fad:list-directory "drinks-template/Stories"))
+(defun story-output-files (idx story-template-files)
+  (mapcar (lambda (fname)
+	    (output-path (story-path fname idx)))
+	  story-template-files))
 
-  (let ((beers (mapcar 'butlast
-		       (remove-if-not (lambda (beer)
-					(string= "TRUE" (car (last beer))))
-				      *beers*))))
-    (loop for i from 0
-       for beer in beers
-       do (process-stories i (append (apply 'story-syms beer)
-				     (font-size-syms (cdr (assoc :ch-name *font-sizes*))
-						     (cdr (assoc :en-name *font-sizes*))
-						     (cdr (assoc :en-desc *font-sizes*))
-						     (cdr (assoc :ch-desc *font-sizes*))
-						     (cdr (assoc :price *font-sizes*))))))
-    (process-template-file "drinks-template/designmap.xml" "output/designmap.xml" (design-map-syms (length beers)))
-    (process-spread-file (length beers))))
+(defun beer-row-story-syms (beer-row idx)
+  (beer-story-syms (nth 0 beer-row)
+		   (nth 1 beer-row)
+		   (nth 2 beer-row)
+		   (nth 3 beer-row)
+		   (nth 4 beer-row)
+		   (nth 7 beer-row)
+		   (nth 6 beer-row)
+		   (1+ idx)))
+
+(defun num-visible-beers (csv)
+  (length (visible-beers csv)))
+
+(defun spread-output (csv)
+  (let ((spread-syms (spread-syms (text-frames (num-visible-beers csv) csv)))
+	(spread-template (read-entire-file "drinks-template/Spreads/Spread_ub9.xml")))
+    (subst-template spread-template spread-syms)))
+
+(defun design-map-output (csv)
+  (let ((design-map-syms (design-map-syms (num-visible-beers csv)))
+	(design-map-template (read-entire-file "drinks-template/designmap.xml"))) 
+    (subst-template design-map-template design-map-syms)))
+
+(defun idxs (count) (loop for i below count collecting i))
+
+(defun all-story-output-files (beers story-template-files)
+  (mapcan (lambda (i)
+	    (story-output-files i story-template-files))
+	  (idxs (length beers))))
+
+(defun all-story-outputs (story-templates csv)
+  (let ((beers (visible-beers csv))
+	(font-size-syms (apply 'font-size-syms (font-sizes csv))))
+   (mapcan (lambda (beer-row i)
+	     (let ((story-syms (story-syms (beer-row-story-syms beer-row i)
+					   font-size-syms i)))
+	       (let ((story-outputs (mapcar (lambda (template)
+					      (subst-template template story-syms))
+					    story-templates)))
+		 story-outputs)))
+	   beers
+	   (idxs (length beers)))))
+
+(defun process-menu ()
+  (setq *id* 0)
+
+  (let*((csv (read-beers-tsv))
+	(story-template-files (story-template-files))
+	(story-templates (mapcar 'read-entire-file story-template-files)))
+
+    (mapc 'write-utf-8-file
+	  (all-story-output-files (visible-beers csv) story-template-files)
+	  (all-story-outputs story-templates csv))
+
+    (write-utf-8-file "output/designmap.xml" (design-map-output csv)) 
+    (write-utf-8-file "output/Spreads/Spread_ub9.xml" (spread-output csv))))
+
+(all-story-output-files (visible-beers (read-beers-tsv)) (story-template-files))
+(third
+ (all-story-outputs (mapcar 'read-entire-file (story-template-files))
+		    (read-beers-tsv)))
 
 (process-menu)
 (exit)
